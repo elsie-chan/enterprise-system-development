@@ -1,0 +1,74 @@
+\documentclass[12pt,a4paper,2sides]{report}
+\usepackage{lib/lib}
+\onehalfspacing %Giãn dòng phân nửa.
+
+%----------------- Set the report particulars --------------
+\newcommand{\university}{Ton Duc Thang University} 
+\newcommand{\khoa}{Information Technology} %TÊN NGÀNH, KHOA.
+\newcommand{\de}{FINAL REPORT}
+\newcommand{\doan}{Hotel Management System}
+\newcommand{\monhoc}{Enterprise Systems Development Concepts}%TÊN MÔN HỌC 
+\newcommand{\gvhd}{Duong Huu Phuc} %TÊN CỦA GIẢNG VIÊN HƯỚNG DẪN
+\newcommand{\tacgia}{Trinh Lam Nhu - 52100916} %TÊN CỦA NGƯỜI VIẾT
+\newcommand{\svhai}{Dinh Hoang Phuc - 52100290}
+\newcommand{\svba}{La Quoc Bao - 52100872}
+\newcommand{\nam}{2023}
+
+%  -------------------------------------------------
+%  --------- The document starts from here --------- 
+%  -------------------------------------------------
+\begin{document}
+\pagenumbering{roman}
+
+% ------------------  COVER PAGE -------------------
+\include{modules/cover1} \clearpage
+\include{modules/cover2}
+
+% ----------------------  THANKS -----------------------
+\clearpage
+\include{modules/thanks}
+
+% ----------------------  DECLARATION -----------------------
+\clearpage
+\include{modules/declaration}
+
+% ----------------------  ABSTRACT -----------------------
+\clearpage
+\include{modules/abstract}
+
+% ------------------  TABLE OF CONTENTS --------------------
+\clearpage
+\tableofcontents 
+\listoftables
+\listoffigures
+
+% ------------------  ABBREVIATIONS --------------------
+\clearpage
+\include{modules/abbreviation}
+
+\clearpage
+\pagenumbering{arabic}
+%-----------------------------------------------------------
+% Include Chapters 
+%-----------------------------------------------------------
+ \include{chapters/chapter1}
+ \include{chapters/chapter2}
+ \include{chapters/chapter3}
+ \include{chapters/chapter4}
+ \include{chapters/chapter5}
+%-----------------------------------------------------------
+
+% -------------------  References ---------------------
+\clearpage
+\nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{./modules/References}
+\addcontentsline{toc}{chapter}{References} % Adds References Section to Table of Contents
+% -------------------  Appendix  ---------------------
+\addcontentsline{toc}{chapter}{Appendix}
+\input{modules/appendix}                       
+
+\end{document}
+%  -------------------------------------------------
+%  --------- The document ends from here ----------- 
+%  -------------------------------------------------
